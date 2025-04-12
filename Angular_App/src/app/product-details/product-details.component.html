@@ -1,0 +1,46 @@
+<!-- product-details.component.html -->
+<div class="specific-product-information">
+    <div id="product-details" class="specific-product-details">
+    <div class="product-image-container" *ngIf="product">
+      <div>
+        <h3>{{product.name}}</h3>
+      </div>
+      <img [src]="'http://localhost:8090/' + product.imageUrl" alt="{{product.name}}" class="product-image">
+      <div>
+        <p class="product-meta" id="product-meta">
+          {{product.name}} 
+          <!-- <br> 200 Subscribers <br> 4 Stars -->
+           <br>Subscriptions: {{product.subscriptionCount}}
+           <br>
+           Rating: {{product.rating}}
+        </p>
+      </div>
+    </div>
+  
+    <div class="product-desc-container">
+      <ul class="product-description">
+        <li><i>{{product.description}}</i></li>
+      </ul>
+  
+      <div class="button-container">
+        <button class="subscribe-btn" (click)="subscriptionPopup.showPopup()">Subscribe</button>
+        <button class="review-btn">Add a Review</button>
+      </div>
+    </div>
+  
+    <div class="product-review-container">
+      <h3>Users Reviews</h3>
+      <div class="review-card">
+        <p><strong>Saranya – 5 Stars</strong></p>
+        <p><em>This product is so tasty and worth to have it.</em></p>
+      </div>
+      <button class="more-reviews-btn">Click For More</button>
+    </div>
+  <div *ngIf="!product">
+    <p>Product Not Found</p>
+  </div>
+
+</div>
+</div>
+<app-subscribe-product #subscriptionPopup></app-subscribe-product>
+  

@@ -1,0 +1,17 @@
+<div class="popup-overlay" *ngIf="isVisible">
+    <div class="popup-content">
+      <h2>Subscribe</h2>
+      <div>
+        <label for="username">Username:</label>
+        <span id="username">{{ username }}</span>
+      </div>
+      <div>
+        <label for="subscribe-status">Subscribe Status:</label>
+        <input type="checkbox" id="subscribe-status">
+        <!-- <input type="checkbox" id="subscribe-status" [(ngModel)]="subscribeStatus"> -->
+      </div>
+      <button (click)="onSubmit()">Submit</button>
+      <button (click)="closePopup()">Close</button>
+    </div>
+  </div>
+  
