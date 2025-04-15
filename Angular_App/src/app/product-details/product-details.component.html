@@ -28,15 +28,16 @@
       </div>
     </div>
   
-    <div class="product-review-container">
-      <h3>Users Reviews</h3>
+    <!-- <div class="product-review-container"> -->
+      <app-user-review></app-user-review>
+      <!-- <h3>Users Reviews</h3>
       <div class="review-card">
         <p><strong>Saranya – 5 Stars</strong></p>
         <p><em>This product is so tasty and worth to have it.</em></p>
       </div>
-      <button class="more-reviews-btn">Click For More</button> 
+      <button class="more-reviews-btn">Click For More</button>  -->
       <!-- (click)="openPopup()" -->
-    </div> 
+    <!-- </div>  -->
   <div *ngIf="!product">
     <p>Product Not Found</p>
   </div>
@@ -46,8 +47,6 @@
 <app-subscribe-product #subscriptionPopup></app-subscribe-product>
 <app-add-review-product #addReviewPopup></app-add-review-product>
 
-<!-- User Review Popup Component -->
-<!-- <app-user-review-popup [reviews]="reviews" [showPopup]="showPopup" (close)="closePopup()"></app-user-review-popup> -->
 
 
   
