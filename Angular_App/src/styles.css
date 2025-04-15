@@ -179,14 +179,14 @@ h2{
     color: white;
   }
 
-.filter-section{
+/* .filter-section{
     background-color: #FBE3D6;
     padding: 15px;
     border-radius: 10px;
     margin-right: 10px;
     width: 20%;
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
-}
+/* }
 .filter-section form {
     display: flex;
     flex-direction: column;
@@ -222,7 +222,7 @@ h2{
 
 .filter-section button:hover {
     background-color: #6a1b9a;
-}
+} */ 
 
 
 .specific-product-information {
