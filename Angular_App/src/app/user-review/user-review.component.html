@@ -1,0 +1,12 @@
+<div class="popup">
+    <div class="product-review-container">
+      <h3>Users Reviews</h3>
+      <div *ngFor="let review of reviews" class="review-card">
+        <p><strong>{{ review.name }} – {{ review.rating }} Stars</strong></p>
+        <p><em>{{ review.text }}</em></p>
+      </div>
+      <!-- <button class="more-reviews-btn" (click)="loadMoreReviews()">Click For More</button>
+      <button (click)="closePopup()">Close</button> -->
+    </div>
+  </div>
+  

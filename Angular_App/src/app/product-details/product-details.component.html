@@ -5,14 +5,14 @@
       <div>
         <h3>{{product.name}}</h3>
       </div>
-      <img [src]="'http://localhost:8090/' + product.imageUrl" alt="{{product.name}}" class="product-image">
+      <img [src]="'http://localhost:8090/OMP/product/image/' + product.productid" alt="{{product.name}}" class="product-image">
       <div>
         <p class="product-meta" id="product-meta">
           {{product.name}} 
           <!-- <br> 200 Subscribers <br> 4 Stars -->
-           <br>Subscriptions: {{product.subscriptionCount}}
+           <br>{{product.subscription_count}} subscribes
            <br>
-           Rating: {{product.rating}}
+           {{product.avg_rating}} stars
         </p>
       </div>
     </div>
@@ -24,7 +24,7 @@
   
       <div class="button-container">
         <button class="subscribe-btn" (click)="subscriptionPopup.showPopup()">Subscribe</button>
-        <button class="review-btn">Add a Review</button>
+        <button class="review-btn" (click)="addReviewPopup.showReviewPopup()">Add a Review</button>
       </div>
     </div>
   
@@ -34,8 +34,9 @@
         <p><strong>Saranya – 5 Stars</strong></p>
         <p><em>This product is so tasty and worth to have it.</em></p>
       </div>
-      <button class="more-reviews-btn">Click For More</button>
-    </div>
+      <button class="more-reviews-btn">Click For More</button> 
+      <!-- (click)="openPopup()" -->
+    </div> 
   <div *ngIf="!product">
     <p>Product Not Found</p>
   </div>
@@ -43,4 +44,10 @@
 </div>
 </div>
 <app-subscribe-product #subscriptionPopup></app-subscribe-product>
+<app-add-review-product #addReviewPopup></app-add-review-product>
+
+<!-- User Review Popup Component -->
+<!-- <app-user-review-popup [reviews]="reviews" [showPopup]="showPopup" (close)="closePopup()"></app-user-review-popup> -->
+
+
   

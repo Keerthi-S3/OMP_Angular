@@ -1,0 +1,121 @@
+.review-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures the popup is on top */
+}
+
+.review-content {
+    background-color: #f8d7da; /* Light pink background */
+    padding: 30px; /* Padding inside the popup */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Shadow for depth */
+    width: 400px; /* Width */
+    text-align: center; /* Centered text */
+    border: 2px solid #d63384; /* Dark pink border */
+    position: relative; /* For positioning the close button */
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items horizontally */
+}
+
+.review-content .btn-primary {
+    background-color: #800080; /* Purple background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside buttons */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-bottom: 20px; /* Space below button */
+    width: 100%; /* Full width button */
+}
+
+.review-content .btn-primary:hover {
+    background-color: #4b0082; /* Darker purple on hover */
+}
+
+.form-group {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 15px; /* Space below form groups */
+}
+
+.form-group label {
+    font-weight: bold; /* Bold text for labels */
+    margin-right: 5px; /* Space to the right of labels */
+}
+
+.form-group span {
+    padding: 5px; /* Padding inside spans */
+    border: 1px solid #ccc; /* Border around spans */
+    border-radius: 4px; /* Rounded corners for spans */
+    margin-left: 5px; /* Space to the left of spans */
+}
+
+.rating .stars {
+    display: flex; /* Flexbox for horizontal alignment */
+}
+
+.rating .star {
+    font-size: 24px; /* Size of stars */
+    color: transparent; /* Transparent color for stars */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0 5px; /* Space between stars */
+    border: 2px solid #d63384; /* Border color for stars */
+    border-radius: 50%; /* Rounded corners for stars */
+    padding: 5px; /* Padding inside stars */
+}
+
+.rating .star:hover,
+.rating .star:hover ~ .star {
+    color: #ffd700; /* Yellow color on hover */
+}
+
+.rating .star.selected,
+.rating .star.selected ~ .star {
+    color: #ffd700; /* Yellow color when selected */
+}
+
+.form-group textarea {
+    width: 100%; /* Full width textarea */
+    border: 2px solid #d63384; /* Dark pink border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding inside textarea */
+}
+
+.review-content button {
+    background-color: #800080; /* Purple background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside buttons */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above buttons */
+    width: 100%; /* Full width buttons */
+}
+
+.review-content button:hover {
+    background-color: #4b0082; /* Darker purple on hover */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    border: 1px solid #ccc; /* Border around close button */
+    border-radius: 50%; /* Rounded corners */
+    width: 20px; /* Fixed width */
+    height: 20px; /* Fixed height */
+    text-align: center; /* Centered text */
+    cursor: pointer; /* Pointer cursor on hover */
+    line-height: 20px; /* Center the text vertically */
+}

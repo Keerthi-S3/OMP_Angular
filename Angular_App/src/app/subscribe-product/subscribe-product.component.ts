@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-subscribe-product',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './subscribe-product.component.html',
   styleUrl: './subscribe-product.component.css'
 })

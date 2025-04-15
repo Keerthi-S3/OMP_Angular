@@ -1,0 +1,24 @@
+<div class="review-overlay" *ngIf="isReviewVisible">
+    <div class="review-content">
+        <div class="close-btn" (click)="closeReviewPopup()">×</div>
+        <button class="btn btn-primary">Add A Review</button>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <span id="username">{{ username }}</span>
+        </div>
+        <div class="form-group rating">
+            <label for="rating">Rating:</label>
+            <div class="stars">
+                <span class="star" *ngFor="let star of stars; let i = index" 
+                      [class.selected]="i < rating" 
+                      (click)="rate(i + 1)">★</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="review">Review Descriptions:</label>
+            <textarea id="review" rows="4" cols="50" ></textarea>
+            <!-- [(ngModel)]="reviewDescription" -->
+        </div>
+        <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    </div>
+</div>
