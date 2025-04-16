@@ -9,23 +9,23 @@ import { Component } from '@angular/core';
 })
 export class SubscribeProductComponent {
 
-  
-isVisible = false;
-  username = 'User123'; // This should be retrieved from the database
-  subscribeStatus = false;
 
-  showPopup() {
-    this.isVisible = true;
-  }
+  isVisible = false;
+  username = 'User123'; // This should be retrieved from the database
+  subscribeStatus = false;
 
-  closePopup() {
-    this.isVisible = false;
-  }
+  showPopup() {
+    this.isVisible = true;
+  }
 
-  onSubmit() {
-    alert('Product subscribed!');
-    this.closePopup();
-  }
+  closePopup() {
+    this.isVisible = false;
+  }
+
+  onSubmit() {
+    alert('Product subscribed!');
+    this.closePopup();
+  }
 
 
 }

@@ -10,26 +10,38 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserReviewComponent {
 
-  
-reviews: any[] = [];
-  isAdmin: boolean = true; // Set this based on your authentication logic
 
-  constructor(private http: HttpClient) {}
+  reviews: any[] = [];
+  isAdmin: boolean = true; // Set this based on your authentication logic
+  isVisible: boolean=false;
 
-  ngOnInit(): void {
-    this.fetchReviews();
-  }
+  constructor(private http: HttpClient) { }
 
-  fetchReviews(): void {
-    this.http.get<any[]>('https://localhost:8090/OMP/reviews/getReviews').subscribe(data => {
-          this.reviews = data;
-        });
-    }
-  
-    exportToExcel(): void {
-      // Implement your Excel export logic here
-    }
-  
+  ngOnInit(): void {
+    this.fetchReviews();
+  }
 
+  fetchReviews(): void {
+    this.http.get<any[]>('https://localhost:8090/OMP/reviews/getReviews').subscribe(data => {
+      this.reviews = data;
+    });
+  }
+
+  exportToExcel(): void {
+    // Implement your Excel export logic here
+  }
+
+  showPopup() {
+    this.isVisible = true;
+  }
+
+  closePopup() {
+    this.isVisible = false;
+  }
+
+  onSubmit() {
+    alert('!');
+    this.closePopup();
+  }
 
 }

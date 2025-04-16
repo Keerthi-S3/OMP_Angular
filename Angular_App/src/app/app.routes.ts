@@ -7,10 +7,10 @@ import { SubscribeProductComponent } from './subscribe-product/subscribe-product
 
 export const routes: Routes = [
 
-    { path: '', redirectTo: 'home', pathMatch: 'full' },  
-    { path: 'home', component: HomeComponent }, 
-    {path:'product', component:ProductComponent},
-    {path: 'product-details/:id', component: ProductDetailsComponent },
-    {path:'subscribe-product/:id', component: SubscribeProductComponent}
-    
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'product', component: ProductComponent },
+    { path: 'product-details/:id', component: ProductDetailsComponent },
+    { path: 'subscribe-product/:id', component: SubscribeProductComponent }
+
 ];
